@@ -1,10 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>$country</title>
+        <title>Scrapoi - $country</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     </head>
     <body>
-        <h1>Points of interest in $country</h1>
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=$country&zoom=5&size=800x300&maptype=roadmap"/>
-        <ul>$poi_list</ul>
+        <div class="container">
+            <h1 class="text-center">Points of interest in $country <small>crawled from MiNube</small></h1>
+            <img class="img-thumbnail center-block" alt="$country map" src="https://maps.googleapis.com/maps/api/staticmap?center=$country&zoom=5&size=800x300&maptype=roadmap"/>
+            <dl class="dl-horizontal">$poi_list</dl>
+        </div>
     </body>
 </html>

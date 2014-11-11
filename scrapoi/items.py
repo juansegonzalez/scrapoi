@@ -9,5 +9,4 @@ import scrapy
 
 class PoiItem(scrapy.Item):
     name = scrapy.Field()
-    link = scrapy.Field()
     desc = scrapy.Field()

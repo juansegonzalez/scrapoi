@@ -16,9 +16,8 @@ class MinubeSpider(scrapy.Spider):
         for sel in response.xpath("//li[contains(@class, 'poi_cont_desc')]"):
             item = PoiItem()
             item['name'] = sel.xpath('div/span/div/a/@title').extract()[0].encode('utf-8')
-            item['link'] = sel.xpath('div/span/div/a/@href').extract()[0].encode('utf-8')
             item['desc'] = sel.xpath('div/div[contains(@class, "poi_descript")]/text()').extract()[0].encode('utf-8')
-            self.poi_list += '<li><a title="%s" href="%s">%s</a><p>%s</p></li>' % (item['name'], item['link'], item['name'], item['desc'])
+            self.poi_list += '<dt>%s</dt><dd>%s</dd>' % (item['name'], item['desc'])
             yield item
 
     def closed(self, reason):
