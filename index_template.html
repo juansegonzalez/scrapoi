@@ -6,9 +6,10 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center">Points of interest in $country <small>crawled from MiNube</small></h1>
+            <h1 class="text-center">Points of interest in $country <small>crawled with ScraPoi</small></h1>
             <img class="img-thumbnail center-block" alt="$country map" src="https://maps.googleapis.com/maps/api/staticmap?center=$country&zoom=5&size=800x300&maptype=roadmap"/>
             <dl class="dl-horizontal">$poi_list</dl>
+            <p class="small text-center">Powered by <a href="http://scrapy.org/" title="Scrapy | A Fast and Powerful Scraping and Web Crawling Framework">Scrapy</a></p>
         </div>
     </body>
 </html>
